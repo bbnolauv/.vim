@@ -6,9 +6,13 @@
 "         |___/
 "         
 
-" === first time uses Todos
-" === .... 
-
+"I manage plugins using vim-plug:
+" https://github.com/junegunn/vim-plug
+"
+" Please run :PlugInstall when you launch Vim for the
+" first time to initialize all the plugins...
+"
+" Scroll to the end of this file to see plugin list.
 
 " ===
 " === Auto load for first time uses
@@ -34,7 +38,7 @@ set ignorecase
 set smartcase
 
 "=======================
-"==== color setting=====
+"==== color setting ====
 "=======================
 set t_Co=256
 
@@ -45,7 +49,7 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-set mouse=n
+set mouse=a
 set encoding=utf-8
 
 set expandtab
@@ -69,14 +73,14 @@ map s <nop>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
 
-"split
+" split
 
 map sj :set nosplitright<CR>:vsplit<CR>
 map sl :set splitright<CR>:vsplit<CR>
 map si :set nosplitbelow<CR>:split<CR>
 map sk :set splitbelow<CR>:split<CR>
 
-"分屏移动
+" split cursor move
 
 map <LEADER>j <C-w>h
 map <LEADER>l <C-w>l
@@ -87,42 +91,29 @@ map <LEADER>k <C-w>j
 "map <down> j
 "map <left> h
 "map <right> l
-"分屏大小调整
+
+" split size
+
 map <C-k> :res -5<CR>
 map <C-i> :res +5<CR>
 map <C-l> :vertical resize-5<CR>
 map <C-j> :vertical resize+5<CR>
-"标签页移动
+
+" tab create switch
 noremap tu :tabnew<CR>
 map tj :tabp<CR>
 map tl :tabn<CR>
-"swich vertical-horizontal
+
+" switch vertical-horizontal
 map sv <C-w>t<C-w>H
 map sh <C-w>t<C-w>K
 
 
 set laststatus=2
-"光标自动定位到上一次操作的位置
+" The cursor is automatically positioned to the position of the last operation
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline/vim-airline'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'vim-airline/vim-airline-themes'
-
-"Plug 'connorholyday/vim-snazzy'
-
-Plug 'morhetz/gruvbox'
-
-"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
-call plug#end()
 
 "====
 "====fileSearch
@@ -213,3 +204,21 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'vim-airline/vim-airline-themes'
+
+"Plug 'connorholyday/vim-snazzy'
+
+Plug 'morhetz/gruvbox'
+
+"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+call plug#end()
