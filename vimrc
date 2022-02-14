@@ -12,7 +12,7 @@
 " Please run :PlugInstall when you launch Vim for the
 " first time to initialize all the plugins...
 "
-" Scroll to the end of this file to see plugin list.
+" Type in :111 to see the plugins list
 
 " ===
 " === Auto load for first time uses
@@ -114,6 +114,23 @@ set laststatus=2
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'vim-airline/vim-airline-themes'
+
+"Plug 'connorholyday/vim-snazzy'
+
+Plug 'morhetz/gruvbox'
+
+"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+call plug#end()
 
 "====
 "====fileSearch
@@ -205,20 +222,4 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
-call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'vim-airline/vim-airline-themes'
-
-"Plug 'connorholyday/vim-snazzy'
-
-Plug 'morhetz/gruvbox'
-
-"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
-call plug#end()
