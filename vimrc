@@ -60,9 +60,9 @@ set softtabstop=2
 
 noremap j h
 noremap k j
-noremap K 5j
+noremap K 30j
 noremap i k
-noremap I 5k
+noremap I 30k
 noremap h i
 noremap H I
 noremap n nzz
@@ -71,7 +71,7 @@ noremap N Nzz
 map S :w<CR>
 map s <nop>
 map Q :q<CR>
-map R :source $MYVIMRC<CR>
+"map R :source $MYVIMRC<CR>
 
 " split
 
