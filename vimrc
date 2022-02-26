@@ -73,6 +73,9 @@ map s <nop>
 map Q :q<CR>
 "map R :source $MYVIMRC<CR>
 
+" :term command mode switch 
+tnoremap <m-q> <c-\><c-n>
+
 " split
 
 map sj :set nosplitright<CR>:vsplit<CR>
