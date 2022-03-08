@@ -74,7 +74,7 @@ map Q :q<CR>
 "map R :source $MYVIMRC<CR>
 
 " :term command mode switch 
-tnoremap <m-q> <c-\><c-n>
+"tnoremap <m-q> <c-\><c-n>
 
 " split
 
@@ -138,7 +138,8 @@ call plug#end()
 "====
 "====fileSearch
 "====
-nnoremap <c-f> :Leaderf file<CR>
+"hotkey <LEADER>f
+"nnoremap <c-f> :Leaderf file<CR>
 
 "let g:airline_theme='dark'
 "colorscheme default
@@ -183,7 +184,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-"Use <c-space> to trigger completion. !!!! DONT WORK !!!!
+"Use <c-space> to trigger completion. (it work after additional change, guess
+"due to the XShell which I use has a different send instruction set)!!!! DONT WORK !!!!
 inoremap <silent><expr> <NUL> coc#refresh()
 "if has('nvim')
   "inoremap <silent><expr> <c-space> coc#refresh()
@@ -208,7 +210,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
+" Use h to show documentation in preview window.
 nnoremap <silent> <LEADER>h :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
