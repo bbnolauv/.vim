@@ -101,3 +101,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ra=ranger
 alias v=vim 
+alias de="cd ~/Desktop"
+alias s=ls
