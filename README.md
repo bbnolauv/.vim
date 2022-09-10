@@ -1,2 +1,2 @@
 # .vim
-My vim settings folder
+My vim config folder
