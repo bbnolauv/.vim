@@ -16,6 +16,7 @@ set smartcase
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -24,6 +25,15 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 call plug#end()
+" }}}
+
+" Plugin spec {{{
+
+" Colorscheme
+colorscheme onedark
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 " }}}
 
 " Keymaps {{{
